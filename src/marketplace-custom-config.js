@@ -93,11 +93,11 @@ export const filters = [
     },
   },
   {
-    id: 'amenities',
-    label: 'Amenities',
+    id: 'designers',
+    label: 'Designers',
     type: 'SelectMultipleFilter',
     group: 'secondary',
-    queryParamNames: ['pub_amenities'],
+    queryParamNames: ['pub_designers'],
     config: {
       // Optional modes: 'has_all', 'has_any'
       // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
@@ -109,36 +109,116 @@ export const filters = [
       // to make filter customizations a bit easier.
       options: [
         {
-          key: 'towels',
-          label: 'Towels',
+          key: 'alexander_wang',
+          label: 'Alexander Wang',
         },
         {
-          key: 'bathroom',
-          label: 'Bathroom',
+          key: 'amina_muaddi',
+          label: 'Amina Muaddi',
         },
         {
-          key: 'swimming_pool',
-          label: 'Swimming pool',
+          key: 'balenciaga',
+          label: 'Balenciaga',
         },
         {
-          key: 'own_drinks',
-          label: 'Own drinks allowed',
+          key: 'bottega_veneta',
+          label: 'Bottega Veneta',
         },
         {
-          key: 'jacuzzi',
-          label: 'Jacuzzi',
+          key: 'by_far',
+          label: 'By Far',
         },
         {
-          key: 'audiovisual_entertainment',
-          label: 'Audiovisual entertainment',
+          key: 'celine',
+          label: 'Celine',
         },
         {
-          key: 'barbeque',
-          label: 'Barbeque',
+          key: 'chanel',
+          label: 'Chanel',
         },
         {
-          key: 'own_food_allowed',
-          label: 'Own food allowed',
+          key: 'chloe',
+          label: 'Chloe',
+        },
+        {
+          key: 'christian_dior',
+          label: 'Christian Dior',
+        },
+        {
+          key: 'cult_gaia',
+          label: 'Cult Gaia',
+        },
+        {
+          key: 'dolce_gabbana',
+          label: 'Dolce & Gabbana',
+        },
+        {
+          key: 'fendi',
+          label: 'Fendi',
+        },
+        {
+          key: 'givenchy',
+          label: 'Givenchy',
+        },
+        {
+          key: 'goyard',
+          label: 'Goyard',
+        },
+        {
+          key: 'gucci',
+          label: 'Gucci',
+        },
+        {
+          key: 'hermes',
+          label: 'Hermes',
+        },
+        {
+          key: 'jacquemus',
+          label: 'Jacquemus',
+        },
+        {
+          key: 'jimmy_choo',
+          label: 'Jimmy Choo',
+        },
+        {
+          key: 'loewe',
+          label: 'Loewe',
+        },
+        {
+          key: 'louis_uitton',
+          label: 'Louis Vuitton',
+        },
+        {
+          key: 'mansur_gavriel',
+          label: 'Mansur Gavriel',
+        },
+        {
+          key: 'prada',
+          label: 'Prada',
+        },
+        {
+          key: 'saint_laurent',
+          label: 'Saint Laurent',
+        },
+        {
+          key: 'staud',
+          label: 'Staud',
+        },
+        {
+          key: 'telfar',
+          label: 'Telfar',
+        },
+        {
+          key: 'the_attico',
+          label: 'The Attico',
+        },
+        {
+          key: 'valentino',
+          label: 'Valentino',
+        },
+        {
+          key: 'versace',
+          label: 'Versace',
         },
       ],
     },
