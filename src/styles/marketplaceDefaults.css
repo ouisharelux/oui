@@ -17,9 +17,9 @@
 :root {
   /* ================ Colors ================ */
 
-  --marketplaceColor: #c0392b;
-  --marketplaceColorLight: #ff4c38;
-  --marketplaceColorDark: #8c291e;
+  --marketplaceColor: #c200fb;
+  --marketplaceColorLight: #d649ff;
+  --marketplaceColorDark: #8700af;
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;
@@ -27,10 +27,10 @@
   --successColor: #2ecc71;
   --successColorDark: #239954;
   --successColorLight: #f0fff6;
-  --failColor: #ff0000;
-  --failColorLight: #fff0f0;
-  --attentionColor: #ffaa00;
-  --attentionColorLight: #fff7f0;
+  --failColor: #FC2F00;
+  --failColorLight: #ff6b4a;
+  --attentionColor: #EC7D10;
+  --attentionColorLight: #f3a455;
   --bannedColorLight: var(--marketplaceColorLight);
   --bannedColorDark: var(--marketplaceColor);
 
