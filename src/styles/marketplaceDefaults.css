@@ -21,6 +21,10 @@
   --marketplaceColorLight: #d649ff;
   --marketplaceColorDark: #8700af;
 
+  --marketplaceAccent1: #EC0868;
+  --marketplaceAccent2: #EC7D10;
+  --marketplaceAccent3: #FFBCOA;
+
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;
 
