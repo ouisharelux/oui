@@ -7,7 +7,8 @@ import { FormattedMessage } from '../../util/reactIntl';
 import { findOptionsForSelectFilter } from '../../util/search';
 import { propTypes } from '../../util/types';
 import config from '../../config';
-import { Button, FieldCheckboxGroup, Form } from '../../components';
+import { Button, FieldRadioGroup, Form } from '../../components';
+import { required, composeValidators } from '../../util/validators';
 
 import css from './EditListingFeaturesForm.module.css';
 
@@ -49,13 +50,13 @@ const EditListingFeaturesFormComponent = props => (
         </p>
       ) : null;
 
-      const options = findOptionsForSelectFilter('amenities', filterConfig);
+      const options = findOptionsForSelectFilter('designers', filterConfig);
       return (
         <Form className={classes} onSubmit={handleSubmit}>
           {errorMessage}
           {errorMessageShowListing}
 
-          <FieldCheckboxGroup className={css.features} id={name} name={name} options={options} />
+          <FieldRadioGroup validate={composeValidators(required("Please select a designer."))} className={css.features} id={name} name={name} options={options} twoColumns />
 
           <Button
             className={css.submitButton}
