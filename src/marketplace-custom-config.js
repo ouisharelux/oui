@@ -93,7 +93,7 @@ export const filters = [
     },
   },
   {
-    id: 'designers',
+    id: 'designer',
     label: 'Designers',
     type: 'SelectMultipleFilter',
     group: 'secondary',

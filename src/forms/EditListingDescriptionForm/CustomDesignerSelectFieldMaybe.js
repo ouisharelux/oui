@@ -4,20 +4,20 @@ import { FieldSelect } from '../../components';
 
 import css from './EditListingDescriptionForm.module.css';
 
-const CustomCategorySelectFieldMaybe = props => {
-  const { name, id, categories, intl } = props;
+const CustomDesignerSelectFieldMaybe = props => {
+  const { name, id, designers, intl } = props;
   const categoryLabel = intl.formatMessage({
-    id: 'EditListingDescriptionForm.categoryLabel',
+    id: 'EditListingDescriptionForm.designerLabel',
   });
   const categoryPlaceholder = intl.formatMessage({
-    id: 'EditListingDescriptionForm.categoryPlaceholder',
+    id: 'EditListingDescriptionForm.designerPlaceholder',
   });
   const categoryRequired = required(
     intl.formatMessage({
-      id: 'EditListingDescriptionForm.categoryRequired',
+      id: 'EditListingDescriptionForm.designerRequired',
     })
   );
-  return categories ? (
+  return designers ? (
     <FieldSelect
       className={css.category}
       name={name}
@@ -28,13 +28,13 @@ const CustomCategorySelectFieldMaybe = props => {
       <option disabled value="">
         {categoryPlaceholder}
       </option>
-      {categories.map(c => (
-        <option key={c.key} value={c.key}>
-          {c.label}
+      {designers.map(d => (
+        <option key={d.key} value={d.key}>
+          {d.label}
         </option>
       ))}
     </FieldSelect>
   ) : null;
 };
 
-export default CustomCategorySelectFieldMaybe;
+export default CustomDesignerSelectFieldMaybe;

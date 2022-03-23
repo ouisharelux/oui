@@ -7,7 +7,7 @@ import classNames from 'classnames';
 import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
-import CustomCategorySelectFieldMaybe from './CustomCategorySelectFieldMaybe';
+import CustomDesignerSelectFieldMaybe from './CustomDesignerSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.module.css';
 
@@ -18,7 +18,7 @@ const EditListingDescriptionFormComponent = props => (
     {...props}
     render={formRenderProps => {
       const {
-        categories,
+        designers,
         className,
         disabled,
         ready,
@@ -109,10 +109,10 @@ const EditListingDescriptionFormComponent = props => (
             validate={composeValidators(required(descriptionRequiredMessage))}
           />
 
-          <CustomCategorySelectFieldMaybe
-            id="category"
-            name="category"
-            categories={categories}
+          <CustomDesignerSelectFieldMaybe
+            id="designer"
+            name="designer"
+            designers={designers}
             intl={intl}
           />
 
@@ -147,7 +147,7 @@ EditListingDescriptionFormComponent.propTypes = {
     showListingsError: propTypes.error,
     updateListingError: propTypes.error,
   }),
-  categories: arrayOf(
+  designers: arrayOf(
     shape({
       key: string.isRequired,
       label: string.isRequired,
