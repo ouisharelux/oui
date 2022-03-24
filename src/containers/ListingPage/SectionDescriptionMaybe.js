@@ -7,7 +7,7 @@ import css from './ListingPage.module.css';
 const MIN_LENGTH_FOR_LONG_WORDS_IN_DESCRIPTION = 20;
 
 const SectionDescriptionMaybe = props => {
-  const { description } = props;
+  const { description, designer, color } = props;
   return description ? (
     <div className={css.sectionDescription}>
       <h2 className={css.descriptionTitle}>
@@ -19,6 +19,18 @@ const SectionDescriptionMaybe = props => {
           longWordClass: css.longWord,
         })}
       </p>
+      <div className={css.descriptionBrand}>
+          <h3>
+            <FormattedMessage id="ListingPage.descriptionBrand" />
+          </h3>
+            {designer}
+      </div>
+      <div className={css.descriptionColor}>
+          <h3>
+            <FormattedMessage id="ListingPage.descriptionColor" />
+          </h3>
+            {color}
+      </div>
     </div>
   ) : null;
 };

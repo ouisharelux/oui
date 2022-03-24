@@ -46,10 +46,8 @@ import SectionImages from './SectionImages';
 import SectionAvatar from './SectionAvatar';
 import SectionHeading from './SectionHeading';
 import SectionDescriptionMaybe from './SectionDescriptionMaybe';
-import SectionFeaturesMaybe from './SectionFeaturesMaybe';
 import SectionReviews from './SectionReviews';
 import SectionHostMaybe from './SectionHostMaybe';
-import SectionRulesMaybe from './SectionRulesMaybe';
 import SectionMapMaybe from './SectionMapMaybe';
 import css from './ListingPage.module.css';
 
@@ -376,13 +374,19 @@ export class ListingPageComponent extends Component {
       </NamedLink>
     );
 
-    const amenityOptions = findOptionsForSelectFilter('amenities', filterConfig);
-    const categoryOptions = findOptionsForSelectFilter('category', filterConfig);
-    const category =
-      publicData && publicData.category ? (
-        <span>
-          {categoryLabel(categoryOptions, publicData.category)}
-          <span className={css.separator}>•</span>
+    const colorOptions = findOptionsForSelectFilter('color', filterConfig);
+    const designerOptions = findOptionsForSelectFilter('designer', filterConfig);
+    const designer =
+      publicData && publicData.designer ? (
+        <span className={css.descriptionBrandValue}>
+          {categoryLabel(designerOptions, publicData.designer)}
+        </span>
+      ) : null;
+
+      const color =
+      publicData && publicData.color ? (
+        <span className={css.descriptionColorValue}>
+          {categoryLabel(colorOptions, publicData.color)}
         </span>
       ) : null;
 
@@ -429,14 +433,13 @@ export class ListingPageComponent extends Component {
                     priceTitle={priceTitle}
                     formattedPrice={formattedPrice}
                     richTitle={richTitle}
-                    category={category}
+                    designer={designer}
+                    color={color}
                     hostLink={hostLink}
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                   />
-                  <SectionDescriptionMaybe description={description} />
-                  <SectionFeaturesMaybe options={amenityOptions} publicData={publicData} />
-                  <SectionRulesMaybe publicData={publicData} />
+                  <SectionDescriptionMaybe description={description} designer={designer} color={color} />
                   <SectionMapMaybe
                     geolocation={geolocation}
                     publicData={publicData}

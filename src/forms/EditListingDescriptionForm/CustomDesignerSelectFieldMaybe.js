@@ -6,27 +6,27 @@ import css from './EditListingDescriptionForm.module.css';
 
 const CustomDesignerSelectFieldMaybe = props => {
   const { name, id, designers, intl } = props;
-  const categoryLabel = intl.formatMessage({
+  const designerLabel = intl.formatMessage({
     id: 'EditListingDescriptionForm.designerLabel',
   });
-  const categoryPlaceholder = intl.formatMessage({
+  const designerPlaceholder = intl.formatMessage({
     id: 'EditListingDescriptionForm.designerPlaceholder',
   });
-  const categoryRequired = required(
+  const designerRequired = required(
     intl.formatMessage({
       id: 'EditListingDescriptionForm.designerRequired',
     })
   );
   return designers ? (
     <FieldSelect
-      className={css.category}
+      className={css.designer}
       name={name}
       id={id}
-      label={categoryLabel}
-      validate={categoryRequired}
+      label={designerLabel}
+      validate={designerRequired}
     >
       <option disabled value="">
-        {categoryPlaceholder}
+        {designerPlaceholder}
       </option>
       {designers.map(d => (
         <option key={d.key} value={d.key}>

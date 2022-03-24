@@ -412,6 +412,17 @@
   }
 }
 
+.descriptionBrand,
+.descriptionColor {
+  display: flex;
+  align-items: baseline;
+}
+
+.descriptionBrandValue,
+.descriptionColorValue {
+  padding-left: 12px;
+}
+
 .sectionFeatures {
   padding: 0 24px;
   margin-bottom: 32px;

@@ -223,6 +223,113 @@ export const filters = [
       ],
     },
   },
+  {
+    id: 'color',
+    label: 'Color',
+    type: 'SelectMultipleFilter',
+    group: 'secondary',
+    queryParamNames: ['pub_color'],
+    config: {
+      // Optional modes: 'has_all', 'has_any'
+      // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
+      searchMode: 'has_all',
+
+      // "key" is the option you see in Flex Console.
+      // "label" is set here for this web app's UI only.
+      // Note: label is not added through the translation files
+      // to make filter customizations a bit easier.
+      options: [
+        {
+          key: "beige",
+          label: "Beige",
+        },
+        {
+          key: "black",
+          label: "Black",
+        },
+        {
+          key: "blue",
+          label: "Blue",
+        },
+        {
+          key: "brown",
+          label: "Brown",
+        },
+        {
+          key: "burgundy",
+          label: "Burgundy",
+        },
+        {
+          key: "camel",
+          label: "Camel",
+        },
+        {
+          key: "ecru",
+          label: "Ecru",
+        },
+        {
+          key: "gold",
+          label: "Gold",
+        },
+        {
+          key: "gray",
+          label: "Gray",
+        },
+        {
+          key: "green",
+          label: "Green",
+        },
+        {
+          key: "metallic",
+          label: "Metallic",
+        },
+        {
+          key: "multicolor",
+          label: "Multicolor",
+        },
+        {
+          key: "navy",
+          label: "Navy",
+        },
+        {
+          key: "orange",
+          label: "Orange",
+        },
+        {
+          key: "pink",
+          label: "Pink",
+        },
+        {
+          key: "purple",
+          label: "Purple",
+        },
+        {
+          key: "red",
+          label: "Red",
+        },
+        {
+          key: "silver",
+          label: "Silver",
+        },
+        {
+          key: "turquoise",
+          label: "Turquoise",
+        },
+        {
+          key: "white",
+          label: "White",
+        },
+        {
+          key: "yellow",
+          label: "Yellow",
+        },
+        {
+          key: "other",
+          label: "Other",
+        },
+      ],
+    },
+  }
 ];
 
 export const sortConfig = {

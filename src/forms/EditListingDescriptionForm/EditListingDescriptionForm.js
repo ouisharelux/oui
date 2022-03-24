@@ -8,6 +8,7 @@ import { propTypes } from '../../util/types';
 import { maxLength, required, composeValidators } from '../../util/validators';
 import { Form, Button, FieldTextInput } from '../../components';
 import CustomDesignerSelectFieldMaybe from './CustomDesignerSelectFieldMaybe';
+import CustomColorSelectFieldMaybe from './CustomColorSelectFieldMaybe';
 
 import css from './EditListingDescriptionForm.module.css';
 
@@ -18,6 +19,7 @@ const EditListingDescriptionFormComponent = props => (
     {...props}
     render={formRenderProps => {
       const {
+        colors,
         designers,
         className,
         disabled,
@@ -116,6 +118,13 @@ const EditListingDescriptionFormComponent = props => (
             intl={intl}
           />
 
+          <CustomColorSelectFieldMaybe
+            id="color"
+            name="color"
+            colors={colors}
+            intl={intl}
+          />
+
           <Button
             className={css.submitButton}
             type="submit"
@@ -153,6 +162,13 @@ EditListingDescriptionFormComponent.propTypes = {
       label: string.isRequired,
     })
   ),
+  colors: arrayOf(
+    shape({
+      key: string.isRequired,
+      label: string.isRequired,
+    })
+  ),
+
 };
 
 export default compose(injectIntl)(EditListingDescriptionFormComponent);
