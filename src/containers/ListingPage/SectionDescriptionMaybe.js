@@ -7,7 +7,7 @@ import css from './ListingPage.module.css';
 const MIN_LENGTH_FOR_LONG_WORDS_IN_DESCRIPTION = 20;
 
 const SectionDescriptionMaybe = props => {
-  const { description, designer, color } = props;
+  const { description, designer, color, retailPrice } = props;
   return description ? (
     <div className={css.sectionDescription}>
       <h2 className={css.descriptionTitle}>
@@ -31,6 +31,16 @@ const SectionDescriptionMaybe = props => {
           </h3>
             {color}
       </div>
+      {retailPrice && (
+        <div className={css.descriptionRetailPrice}>
+          <h3>
+            <FormattedMessage id="ListingPage.descriptionRetailPrice" />
+          </h3>
+          <span className={css.descriptionRetailPriceValue}>
+            {retailPrice}
+          </span>
+        </div>
+      )}
     </div>
   ) : null;
 };

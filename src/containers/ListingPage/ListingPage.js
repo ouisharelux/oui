@@ -53,7 +53,7 @@ import css from './ListingPage.module.css';
 
 const MIN_LENGTH_FOR_LONG_WORDS_IN_TITLE = 16;
 
-const { UUID } = sdkTypes;
+const { UUID, Money } = sdkTypes;
 
 const priceData = (price, intl) => {
   if (price && price.currency === config.currency) {
@@ -383,12 +383,28 @@ export class ListingPageComponent extends Component {
         </span>
       ) : null;
 
+      let formattedRetailPrice = null;
+      if (publicData.retailPrice) {
+        const retailPriceMoney = new Money(publicData.retailPrice, config.currencyConfig.currency);
+        formattedRetailPrice = formatMoney(intl, retailPriceMoney);
+      }
+
       const color =
       publicData && publicData.color ? (
         <span className={css.descriptionColorValue}>
           {categoryLabel(colorOptions, publicData.color)}
         </span>
       ) : null;
+
+      let retailPrice = null;
+      if (publicData && publicData.retailPrice) {
+        retailPrice = (
+          <span className={css.descriptionColorValue}>
+          {categoryLabel(colorOptions, publicData.color)}
+          </span>
+
+        );
+      }
 
     return (
       <Page
@@ -439,7 +455,7 @@ export class ListingPageComponent extends Component {
                     showContactUser={showContactUser}
                     onContactUser={this.onContactUser}
                   />
-                  <SectionDescriptionMaybe description={description} designer={designer} color={color} />
+                  <SectionDescriptionMaybe description={description} designer={designer} color={color} retailPrice={formattedRetailPrice} />
                   <SectionMapMaybe
                     geolocation={geolocation}
                     publicData={publicData}

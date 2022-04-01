@@ -36,6 +36,7 @@ export const EditListingPricingFormComponent = props => (
       const isNightly = unitType === LINE_ITEM_NIGHT;
       const isDaily = unitType === LINE_ITEM_DAY;
 
+      // TODO: change to weekly/monthly
       const translationKey = isNightly
         ? 'EditListingPricingForm.pricePerNight'
         : isDaily
@@ -48,6 +49,14 @@ export const EditListingPricingFormComponent = props => (
 
       const pricePlaceholderMessage = intl.formatMessage({
         id: 'EditListingPricingForm.priceInputPlaceholder',
+      });
+
+      const retailPriceMessage = intl.formatMessage({
+        id: 'EditListingPricingForm.retailPrice',
+      });
+
+      const retailPricePlaceholderMessage = intl.formatMessage({
+        id: 'EditListingPricingForm.retailPricePlaceholder',
       });
 
       const priceRequired = validators.required(
@@ -78,7 +87,10 @@ export const EditListingPricingFormComponent = props => (
       const { updateListingError, showListingsError } = fetchErrors || {};
 
       return (
-        <Form onSubmit={handleSubmit} className={classes}>
+        <Form
+          onSubmit={handleSubmit}
+          className={classes}
+        >
           {updateListingError ? (
             <p className={css.error}>
               <FormattedMessage id="EditListingPricingForm.updateFailed" />
@@ -96,6 +108,17 @@ export const EditListingPricingFormComponent = props => (
             autoFocus
             label={pricePerUnitMessage}
             placeholder={pricePlaceholderMessage}
+            currencyConfig={config.currencyConfig}
+            validate={priceValidators}
+          />
+
+          <FieldCurrencyInput
+            id="retail-price"
+            name="retailPrice"
+            className={css.priceInput}
+            autoFocus
+            label={retailPriceMessage}
+            placeholder={retailPricePlaceholderMessage}
             currencyConfig={config.currencyConfig}
             validate={priceValidators}
           />

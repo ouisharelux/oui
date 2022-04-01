@@ -413,13 +413,15 @@
 }
 
 .descriptionBrand,
-.descriptionColor {
+.descriptionColor,
+.descriptionRetailPrice {
   display: flex;
   align-items: baseline;
 }
 
 .descriptionBrandValue,
-.descriptionColorValue {
+.descriptionColorValue,
+.descriptionRetailPriceValue {
   padding-left: 12px;
 }
 
