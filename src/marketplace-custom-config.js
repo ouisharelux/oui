@@ -74,25 +74,6 @@ export const filters = [
     config: {},
   },
   {
-    id: 'category',
-    label: 'Category',
-    type: 'SelectSingleFilter',
-    group: 'secondary',
-    queryParamNames: ['pub_category'],
-    config: {
-      // "key" is the option you see in Flex Console.
-      // "label" is set here for the UI only.
-      // Note: label is not added through the translation files
-      // to make filter customizations a bit easier.
-      options: [
-        { key: 'smoke', label: 'Smoke' },
-        { key: 'electric', label: 'Electric' },
-        { key: 'wood', label: 'Wood' },
-        { key: 'other', label: 'Other' },
-      ],
-    },
-  },
-  {
     id: 'designer',
     label: 'Designers',
     type: 'SelectMultipleFilter',
@@ -101,7 +82,7 @@ export const filters = [
     config: {
       // Optional modes: 'has_all', 'has_any'
       // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-      searchMode: 'has_all',
+      searchMode: 'has_any',
 
       // "key" is the option you see in Flex Console.
       // "label" is set here for this web app's UI only.
@@ -232,7 +213,7 @@ export const filters = [
     config: {
       // Optional modes: 'has_all', 'has_any'
       // https://www.sharetribe.com/api-reference/marketplace.html#extended-data-filtering
-      searchMode: 'has_all',
+      searchMode: 'has_any',
 
       // "key" is the option you see in Flex Console.
       // "label" is set here for this web app's UI only.

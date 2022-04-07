@@ -135,6 +135,8 @@
 
 .searchContainer {
   position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
   height: 100%;
   margin-top: 94px;
 }

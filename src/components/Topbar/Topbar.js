@@ -97,15 +97,11 @@ class TopbarComponent extends Component {
 
   handleSubmit(values) {
     const { currentSearchParams } = this.props;
-    const { search, selectedPlace } = values.location;
+    const keywords = values.keywords;
     const { history } = this.props;
-    const { origin, bounds } = selectedPlace;
-    const originMaybe = config.sortSearchByDistance ? { origin } : {};
     const searchParams = {
       ...currentSearchParams,
-      ...originMaybe,
-      address: search,
-      bounds,
+      keywords
     };
     history.push(createResourceLocatorString('SearchPage', routeConfiguration(), {}, searchParams));
   }
@@ -174,18 +170,7 @@ class TopbarComponent extends Component {
       />
     );
 
-    // Only render current search if full place object is available in the URL params
-    const locationFieldsPresent = config.sortSearchByDistance
-      ? address && origin && bounds
-      : address && bounds;
-    const initialSearchFormValues = {
-      location: locationFieldsPresent
-        ? {
-            search: address,
-            selectedPlace: { address, origin, bounds },
-          }
-        : null,
-    };
+    const initialSearchFormValues = null;
 
     const classes = classNames(rootClassName || css.root, className);
 
@@ -259,9 +244,6 @@ class TopbarComponent extends Component {
               initialValues={initialSearchFormValues}
               isMobile
             />
-            <p className={css.mobileHelp}>
-              <FormattedMessage id="Topbar.mobileSearchHelp" />
-            </p>
           </div>
         </Modal>
         <ModalMissingInformation
