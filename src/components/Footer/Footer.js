@@ -108,39 +108,6 @@ const Footer = props => {
                 </li>
               </ul>
             </div>
-            <div className={css.searches}>
-              <ul className={css.list}>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=New%20York%2C%20New%20York&bounds=40.830104%2C-73.939626%2C40.701595%2C-74.015538',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchNewYork" />
-                  </NamedLink>
-                </li>
-                <li className={css.listItem}>
-                  <NamedLink
-                    name="SearchPage"
-                    to={{
-                      search:
-                        '?address=Miami%2C%20Florida&bounds=25.7616798%2C-80.1917902%2C25.7823907%2C-80.2994991',
-                    }}
-                    className={css.link}
-                  >
-                    <FormattedMessage id="Footer.searchMiami" />
-                  </NamedLink>
-                </li>
-              </ul>
-            </div>
-            {/* <div className={css.searchesExtra}>
-              <ul className={css.list}>
-                    TODO: Add additional footer links here
-              </ul>
-            </div> */}
             <div className={css.extraLinks}>
               <div className={css.someLinks}>{socialMediaLinks}</div>
               <div className={css.legalMatters}>
