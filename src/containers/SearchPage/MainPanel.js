@@ -162,7 +162,6 @@ class MainPanel extends Component {
       onManageDisableScrolling,
       onOpenModal,
       onCloseModal,
-      onMapIconClick,
       pagination,
       searchParamsForPagination,
       showAsModalMaxWidth,
@@ -262,7 +261,6 @@ class MainPanel extends Component {
           searchInProgress={searchInProgress}
           searchListingsError={searchListingsError}
           showAsModalMaxWidth={showAsModalMaxWidth}
-          onMapIconClick={onMapIconClick}
           onManageDisableScrolling={onManageDisableScrolling}
           onOpenModal={onOpenModal}
           onCloseModal={onCloseModal}
@@ -358,7 +356,6 @@ MainPanel.propTypes = {
   onManageDisableScrolling: func.isRequired,
   onOpenModal: func.isRequired,
   onCloseModal: func.isRequired,
-  onMapIconClick: func.isRequired,
   pagination: propTypes.pagination,
   searchParamsForPagination: object,
   showAsModalMaxWidth: number.isRequired,

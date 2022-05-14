@@ -69,7 +69,6 @@ class SearchFiltersMobileComponent extends Component {
       resultsCount,
       searchInProgress,
       showAsModalMaxWidth,
-      onMapIconClick,
       onManageDisableScrolling,
       selectedFiltersCount,
       intl,
@@ -108,9 +107,6 @@ class SearchFiltersMobileComponent extends Component {
             />
           </Button>
           {sortByComponent}
-          <div className={css.mapIcon} onClick={onMapIconClick}>
-            <FormattedMessage id="SearchFiltersMobile.openMapView" className={css.mapIconText} />
-          </div>
         </div>
         <ModalInMobile
           id="SearchFiltersMobile.filters"
@@ -160,7 +156,6 @@ SearchFiltersMobileComponent.propTypes = {
   resultsCount: number,
   searchInProgress: bool,
   showAsModalMaxWidth: number.isRequired,
-  onMapIconClick: func.isRequired,
   onManageDisableScrolling: func.isRequired,
   onOpenModal: func.isRequired,
   onCloseModal: func.isRequired,

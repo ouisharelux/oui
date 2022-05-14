@@ -746,7 +746,6 @@
   "SearchFiltersMobile.heading": "Filter bags",
   "SearchFiltersMobile.keywordLabel": "Keyword",
   "SearchFiltersMobile.loadingResults": "Loading…",
-  "SearchFiltersMobile.openMapView": "Map",
   "SearchFiltersMobile.noResults": "No results.",
   "SearchFiltersMobile.resetAll": "Reset all",
   "SearchFiltersMobile.showListings": "Show {count, number} {count, plural, one {bag} other {bags}}",

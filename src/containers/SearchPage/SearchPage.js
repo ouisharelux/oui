@@ -139,11 +139,6 @@ export class SearchPageComponent extends Component {
     const isWindowDefined = typeof window !== 'undefined';
     const isMobileLayout = isWindowDefined && window.innerWidth < MODAL_BREAKPOINT;
 
-    const onMapIconClick = () => {
-      this.useLocationSearchBounds = true;
-      this.setState({ isSearchMapOpenOnMobile: true });
-    };
-
     const { address, bounds, origin } = searchInURL || {};
     const { title, description, schema } = createSearchResultSchema(listings, address, intl);
 
@@ -178,7 +173,6 @@ export class SearchPageComponent extends Component {
             onManageDisableScrolling={onManageDisableScrolling}
             onOpenModal={this.onOpenMobileModal}
             onCloseModal={this.onCloseMobileModal}
-            onMapIconClick={onMapIconClick}
             pagination={pagination}
             searchParamsForPagination={parse(location.search)}
             showAsModalMaxWidth={MODAL_BREAKPOINT}
