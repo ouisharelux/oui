@@ -1,9 +1,9 @@
 {
-  "name": "Saunatime",
-  "short_name": "Saunatime",
+  "name": "Oui",
+  "short_name": "Oui",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#C0392B",
+  "theme_color": "#B09AE7",
   "background_color": "#FFFFFF",
   "icons": [
     {
