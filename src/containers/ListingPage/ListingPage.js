@@ -384,7 +384,7 @@ export class ListingPageComponent extends Component {
       ) : null;
 
       let formattedRetailPrice = null;
-      if (publicData.retailPrice) {
+      if (publicData?.retailPrice) {
         const retailPriceMoney = new Money(publicData.retailPrice, config.currencyConfig.currency);
         formattedRetailPrice = formatMoney(intl, retailPriceMoney);
       }
