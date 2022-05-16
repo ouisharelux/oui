@@ -49,7 +49,7 @@ const SectionLocations = props => {
       <div className={css.title}>
         <FormattedMessage id="SectionLocations.title" />
       </div>
-      <div className={css.locations}>
+      {/* <div className={css.locations}>
         {locationLink(
           '@maggievillamaria',
           'Chanel',
@@ -69,7 +69,7 @@ const SectionLocations = props => {
           hero3,
           '',
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
